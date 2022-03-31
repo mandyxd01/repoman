@@ -42,7 +42,9 @@ async def hello(event):
         caption = re.sub("🙆‍♀ Join Our Backup:- " , "" , caption)
         caption = re.sub("Join now best channel" , "" , caption)
         caption = re.sub("♨️ SEARCH & JOIN NOW👇" , "" , caption)
-
+        caption = re.sub("☆☆☆••••••••••••••••☆☆☆" , "" , caption)
+        caption = re.sub("➥" , "" , caption)
+        caption = re.sub("𝐉𝐎𝐈𝐍 𝐔𝐒 ➪" , "" , caption)
 
         caption = re.sub("@.*" , "" , caption)
         caption = re.sub("https://t.me/.*" , "" , caption)
