@@ -40,6 +40,7 @@ async def hello(event):
         #  this is for blacklist word 
         caption = re.sub("Enjoy it ❤❤❤" , "" , caption)
         caption = re.sub("🙆‍♀ Join Our Backup:- " , "" , caption)
+        caption = re.sub("Join now best channel" , "" , caption)
         caption = re.sub("♨️ SEARCH & JOIN NOW👇" , "" , caption)
 
 
