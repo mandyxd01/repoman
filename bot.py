@@ -47,6 +47,13 @@ async def hello(event):
         caption = re.sub("𝐉𝐎𝐈𝐍 𝐔𝐒 ➪" , "" , caption)
         caption = re.sub("𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗰𝗵𝗮𝗻𝗻𝗲𝗹" , "" , caption)
         caption = re.sub("SHARE OUR CHANNEL👇" , "" , caption)
+        caption = re.sub("Join adult network🍌💦" , "" , caption)
+        caption = re.sub("JOIN CHANNEL 👇" , "" , caption)
+        caption = re.sub("🔥Join channel 🔥" , "" , caption)
+        caption = re.sub("🔥Backup file🔥" , "" , caption)
+        caption = re.sub("▬" , "" , caption)
+        caption = re.sub("●╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼●" , "" , caption)
+        caption = re.sub("=➖" , "" , caption)
 
 
         caption = re.sub("@.*" , "" , caption)
