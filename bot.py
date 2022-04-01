@@ -26,6 +26,8 @@ indsend_to = -1001663052159
 fzz = -1001706261502
 serD = [-1001442038816, -1001477756331, -1001782270836, -1001250582595]
 
+black = ["Enjoy it ❤❤❤","👉 🅱🅰🅲🅺🆄🅿  🅲🅷🅰🅽🅽🅴🅻","▬" ,"➖" ,"=" ,"●╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼●" ,"🔥Backup file🔥" ,"🔥Join channel 🔥" ,"JOIN CHANNEL 👇" ,"Join adult network🍌💦" ,"SHARE OUR CHANNEL👇" ,"𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗰𝗵𝗮𝗻𝗻𝗲𝗹" ,"𝐉𝐎𝐈𝐍 𝐔𝐒 ➪" ,"🙆‍♀ Join Our Backup:- ","Join now best channel" ,"♨️ SEARCH & JOIN NOW👇","☆☆☆••••••••••••••••☆☆☆","➥" ,]
+
 
 @client.on(events.NewMessage(chats=indchats))
 async def hello(event):
@@ -37,25 +39,9 @@ async def hello(event):
             media = await client.download_media(event.message)
         except:
             print("no media")
-        #  this is for blacklist word 
-        caption = re.sub("Enjoy it ❤❤❤" , "" , caption)
-        caption = re.sub("👉 🅱🅰🅲🅺🆄🅿  🅲🅷🅰🅽🅽🅴🅻" , "" , caption)
-        caption = re.sub("🙆‍♀ Join Our Backup:- " , "" , caption)
-        caption = re.sub("Join now best channel" , "" , caption)
-        caption = re.sub("♨️ SEARCH & JOIN NOW👇" , "" , caption)
-        caption = re.sub("☆☆☆••••••••••••••••☆☆☆" , "" , caption)
-        caption = re.sub("➥" , "" , caption)
-        caption = re.sub("𝐉𝐎𝐈𝐍 𝐔𝐒 ➪" , "" , caption)
-        caption = re.sub("𝗧𝗲𝗹𝗲𝗴𝗿𝗮𝗺 𝗰𝗵𝗮𝗻𝗻𝗲𝗹" , "" , caption)
-        caption = re.sub("SHARE OUR CHANNEL👇" , "" , caption)
-        caption = re.sub("Join adult network🍌💦" , "" , caption)
-        caption = re.sub("JOIN CHANNEL 👇" , "" , caption)
-        caption = re.sub("🔥Join channel 🔥" , "" , caption)
-        caption = re.sub("🔥Backup file🔥" , "" , caption)
-        caption = re.sub("▬" , "" , caption)
-        caption = re.sub("●╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼●" , "" , caption)
-        caption = re.sub("=" , "" , caption)
-        caption = re.sub("➖" , "" , caption)
+        #  this is for blacklist word        
+        for i in black:
+            caption = re.sub(i, "" , caption)
 
 
         caption = re.sub("@.*" , "" , caption)
