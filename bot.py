@@ -54,6 +54,7 @@ async def hello(event):
         caption = re.sub("▬" , "" , caption)
         caption = re.sub("●╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼╾⁃⁃╼●" , "" , caption)
         caption = re.sub("=" , "" , caption)
+        caption = re.sub("➖" , "" , caption)
 
 
         caption = re.sub("@.*" , "" , caption)
