@@ -45,7 +45,7 @@ async def hello(event):
         except:
             print("no media")
         #  this is for blacklist word
-        caption = re.sub("Cricket fans ke liye bahut sunhara mauka khele free contest and win kre daily 1lac", "" , caption)
+        caption = re.sub("Cricket fans ke liye bahut sunhara mauka khele free contest and win kre daily 1lac+", "" , caption)
         for i in black:
             caption = re.sub(i, "" , caption)
 
