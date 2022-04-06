@@ -182,7 +182,7 @@ async def runbollyhandler(event):
                 
         msg_id = msg_id+10
         print("sleeping")
-        sleep(500)
+        sleep(3600)
         print("wake")
             
             
