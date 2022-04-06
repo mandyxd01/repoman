@@ -143,16 +143,7 @@ async def hello(event):
             
 
 
-@client.on(events.NewMessage(chats=fzz))
-async def _(event):
-    for i in serD:
-        try:
-            await client.send_message(
-                i,
-                event.message
-            )
-        except Exception as e:
-            print(e)
+
             
             
           
