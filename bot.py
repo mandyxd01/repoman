@@ -1,3 +1,4 @@
+from random import randint
 import re
 from time import sleep
 import requests
@@ -143,7 +144,46 @@ async def hello(event):
             
 
 
+chats = [-1001663052159]
+chats_to_send = [-1001696893100, -1001782270836,-1001477756331,-1001142224290,-1001198221154]
 
+messages_toSend = []
+messages_sent = []
+@client.on(events.NewMessage(pattern=r'\.for'))
+async def runbollyhandler(event):
+    replied_msg = await event.get_reply_message()
+    
+    chat = await event.get_chat()
+    
+    msg_id = replied_msg.id
+    await client.delete_messages(chat , event.message)
+    
+    
+    
+    while 1:
+        for ch in chats_to_send:
+            try:
+                allmsg = await client.get_messages(chat , None , reverse=True , min_id=(msg_id-1) , max_id=(msg_id+10))
+            except:
+                await client.send_message(720212064 , "Not enogh messages")
+                return 0
+            if len(allmsg) == 0:
+                return 0
+            messages_toSend = []
+            messages_sent = []
+            for msg in allmsg:
+                    messages_toSend.append(msg)
+                    #print(msg)
+            while len(messages_sent) != len(messages_toSend):
+                ran = randint(0 , len(messages_toSend) -1)
+                if not ran in messages_sent:
+                    await client.send_message(ch, messages_toSend[ran])
+                    messages_sent.append(ran)
+                
+        msg_id = msg_id+10
+        print("sleeping")
+        sleep(500)
+        print("wake")
             
             
           
