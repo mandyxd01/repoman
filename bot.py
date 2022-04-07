@@ -149,7 +149,7 @@ chats_to_send = [-1001696893100, -1001782270836,-1001477756331,-1001142224290,-1
 
 messages_toSend = []
 messages_sent = []
-@client.on(events.NewMessage(pattern=r'\.for'))
+@client.on(events.NewMessage(pattern=r'\.for',chats = chats))
 async def runbollyhandler(event):
     replied_msg = await event.get_reply_message()
     
