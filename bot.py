@@ -142,7 +142,7 @@ async def hello(event):
             await client.send_message(mix1_to , caption)
             
             
-
+####### for all #######
 
 chats = [-1001663052159]
 chats_to_send = [-1001696893100, -1001782270836,-1001477756331,-1001142224290,-1001198221154]
@@ -168,6 +168,7 @@ async def runbollyhandler(event):
                 await client.send_message(720212064 , "Not enogh messages")
                 return 0
             if len(allmsg) == 0:
+                await client.send_message('@m3nd7' , "Not enogh messages")
                 return 0
             messages_toSend = []
             messages_sent = []
