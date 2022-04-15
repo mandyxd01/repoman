@@ -76,7 +76,7 @@ async def hello(event):
             # print("changed link : " , shareLink)
             caption = re.sub(link , shareLink , caption)
             # print(caption)
-            sleep(0.8)
+            sleep(0.2)
         caption = caption + "\n" + footer
         caption = re.sub("Cricket fans ke liye bahut sunhara mauka khele free contest and win kre daily 1lac"+"+", "" , caption)
         caption = re.sub("Is IPL season daily 1000k+ prize 🏆", "" , caption)
