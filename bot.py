@@ -47,13 +47,14 @@ async def hello(event):
         #  this is for blacklist word
         
         
-        for i in black:
-            caption = re.sub(i, "" , caption)
+        
 
 
         caption = re.sub("@.*" , "" , caption)
         caption = re.sub("https://t.me/.*" , "" , caption)
         caption = re.sub("t.me/.*" , "" , caption)
+        for i in black:
+            caption = re.sub(i, "" , caption)
 
         regrex_pattern = re.compile(pattern = "["
                     u"\U0001F600-\U0001F64F"  # emoticons
@@ -104,13 +105,14 @@ async def hello2(event):
         #  this is for blacklist word
         
         
-        for i in black:
-            caption = re.sub(i, "" , caption)
+        
 
 
         caption = re.sub("@.*" , "" , caption)
         caption = re.sub("https://t.me/.*" , "" , caption)
         caption = re.sub("t.me/.*" , "" , caption)
+        for i in black:
+            caption = re.sub(i, "" , caption)
 
         regrex_pattern = re.compile(pattern = "["
                     u"\U0001F600-\U0001F64F"  # emoticons
@@ -159,14 +161,13 @@ async def hello1(event):
             print("no media")
         #  this is for blacklist word
         
-        
-        for i in black:
-            caption = re.sub(i, "" , caption)
 
 
         caption = re.sub("@.*" , "" , caption)
         caption = re.sub("https://t.me/.*" , "" , caption)
         caption = re.sub("t.me/.*" , "" , caption)
+        for i in black:
+            caption = re.sub(i, "" , caption)
 
         regrex_pattern = re.compile(pattern = "["
                     u"\U0001F600-\U0001F64F"  # emoticons
